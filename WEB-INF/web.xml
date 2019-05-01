@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<filter>
+		<filter-name>timing</filter-name>
+		<filter-class>filter.Timing</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>timing</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>ackermann</servlet-name>
+		<servlet-class>plain.servlet.Ackermann</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>fibo</servlet-name>
+		<servlet-class>plain.servlet.Fibo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hash</servlet-name>
+		<servlet-class>plain.servlet.Hash</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hash2</servlet-name>
+		<servlet-class>plain.servlet.Hash2</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>heapsort</servlet-name>
+		<servlet-class>plain.servlet.HeapSort</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>matrix</servlet-name>
+		<servlet-class>plain.servlet.Matrix</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ackermann</servlet-name>
+		<url-pattern>/plain/ackermann</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>fibo</servlet-name>
+		<url-pattern>/plain/fibo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hash</servlet-name>
+		<url-pattern>/plain/hash</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hash2</servlet-name>
+		<url-pattern>/plain/hash2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>heapsort</servlet-name>
+		<url-pattern>/plain/heapsort</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>matrix</servlet-name>
+		<url-pattern>/plain/matrix</url-pattern>
+	</servlet-mapping>
+
+</web-app>
